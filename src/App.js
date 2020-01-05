@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
+import './css/bootstrap.min.css';
+import './css/owl.carousel.min.css';
+import './css/magnific-popup.css';
+import './css/font-awesome.min.css';
+import './css/themify-icons.css';
+import './css/nice-select.css';
+import './css/flaticon.css';
+import './css/slicknav.css';
+import './css/style.css';
+import Main from './components/Main';
+import Blog from './components/Blog';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <BrowserRouter>
+            <Route exact  path="/" component={Main} />
+            <Route   path="/blog" component={Blog} />
+        </BrowserRouter>
   );
 }
 
